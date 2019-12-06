@@ -23,6 +23,9 @@ Plugin 'epilande/vim-es2015-snippets'
 Plugin 'epilande/vim-react-snippets'
 Plugin 'easymotion/vim-easymotion'
 
+" ========= Go plugins
+Plugin 'fatih/vim-go'
+
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
@@ -236,11 +239,11 @@ augroup END
 " Light: ChocolatePapaya
 Plugin 'morhetz/gruvbox'
 colorscheme gruvbox
-  let g:gruvbox_contrast_dark='default'
+  let g:gruvbox_contrast_dark='light'
   let g:gruvbox_contrast_light='default'
 " split below and right feels more natural
 set splitbelow
-set background=light
+set background=dark
 " no wrapping
 set nowrap
 
