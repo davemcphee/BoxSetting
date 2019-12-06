@@ -236,11 +236,11 @@ augroup END
 " Light: ChocolatePapaya
 Plugin 'morhetz/gruvbox'
 colorscheme gruvbox
-  let g:gruvbox_contrast_dark='default'
+  let g:gruvbox_contrast_dark='light'
   let g:gruvbox_contrast_light='default'
 " split below and right feels more natural
 set splitbelow
-set background=light
+set background=dark
 " no wrapping
 set nowrap
 

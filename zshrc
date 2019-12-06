@@ -1,7 +1,6 @@
-export ZSH="/Users/danielshotonwa/.oh-my-zsh"
-# Use spaceship theme
+export ZSH="/Users/aschmitz/.oh-my-zsh"
 
-ZSH_THEME="spaceship"
+ZSH_THEME="agnoster"
 autoload -U promptinit; promptinit
 export UPDATE_ZSH_DAYS=1
 
@@ -15,27 +14,16 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   git
   docker
-  rails
-  npm
-  django
-  rails
-  git zsh-z
-  bundler
   dotenv
   osx
-  rake
-  rbenv
-  ruby
   jsontools
-  node
   pip
-  web-search
   zsh-autosuggestions
   colored-man-pages
   colorize
   common-aliases
   copyfile
-)
+)	
 
 SPACESHIP_PROMPT_ORDER=(
   time
@@ -199,7 +187,7 @@ local ret_status="%(?:%{$fg[yellow]%}=> :%{$fg[red]%}=> %s)"
 # npm global
 export PATH=~/.npm-global/bin:$PATH
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
