@@ -1,5 +1,5 @@
 # BoxSetting
-This Box setting setup my terminal using VIM. Tmux, Item and Zsh
+This Box setting setup my terminal using VIM. Tmux, Item and ZshA
 
 - Install all this to have a super terminal
 
@@ -16,3 +16,9 @@ This Box setting setup my terminal using VIM. Tmux, Item and Zsh
 
 #### Tutorial for setting it up
 - [tutorial](https://danielshow.dev/blogs/setting-up-vim-tmux-iterm-and-oh-my-zsh-a-better-workflow)
+
+####
+- I run this on MacOS with the CapsLock Key modified using Karabiner-Elements. A `tap` is Esc, a `hold` is Control. 
+- - Hold CapsLock and press `a`: C-a
+- - Tap CapsLock and press `.`: Esc-. (recall last cmd line arg)
+
