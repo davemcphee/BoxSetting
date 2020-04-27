@@ -1,4 +1,4 @@
-export ZSH="/Users/aschmitz/.oh-my-zsh"
+export ZSH="/home/aschmitz/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
 autoload -U promptinit; promptinit
@@ -199,3 +199,16 @@ export GOPATH="${HOME}/go"
 
 # ALIASES
 alias bas="ssh bastion"
+
+# Sick ASN DNS query func
+function asn() {  dig $(dig -x $1 | grep PTR | tail -n 1 | grep -Eo '\d+\.\d+\.\d+\.\d+').origin.asn.cymru.com TXT +short }
+
+# stupid max ssh
+# ssh-add -K ~/.ssh/*
+
+# node / nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh"  ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export PATH="/usr/local/sbin:$PATH"
