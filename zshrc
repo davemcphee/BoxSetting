@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 export ZSH="/home/aschmitz/.oh-my-zsh"
+=======
+export ZSH="/Users/aschmitz/.oh-my-zsh"
+>>>>>>> cfc490634f9eeb1b9f41899f285ff08ea40a9a48
 
 ZSH_THEME="agnoster"
 autoload -U promptinit; promptinit
