@@ -15,10 +15,10 @@ This Box setting setup my terminal using VIM. Tmux, Item and ZshA
 ### Hurray, The TERMINAL is yours
 
 #### Tutorial for setting it up
-- [tutorial](https://danielshow.dev/blogs/setting-up-vim-tmux-iterm-and-oh-my-zsh-a-better-workflow)
+  - [tutorial](https://danielshow.dev/blogs/setting-up-vim-tmux-iterm-and-oh-my-zsh-a-better-workflow)
 
-####
+#### MacOS key bindings notes
 - I run this on MacOS with the CapsLock Key modified using Karabiner-Elements. A `tap` is Esc, a `hold` is Control. 
-- - Hold CapsLock and press `a`: C-a
-- - Tap CapsLock and press `.`: Esc-. (recall last cmd line arg)
+  - Hold CapsLock and press `a`: C-a
+  - Tap CapsLock and press `.`: Esc-. (recall last cmd line arg)
 
