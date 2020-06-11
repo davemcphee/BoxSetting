@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-export ZSH="/home/aschmitz/.oh-my-zsh"
-=======
 export ZSH="/Users/aschmitz/.oh-my-zsh"
->>>>>>> cfc490634f9eeb1b9f41899f285ff08ea40a9a48
 
 ZSH_THEME="agnoster"
 autoload -U promptinit; promptinit
@@ -208,7 +204,7 @@ alias bas="ssh bastion"
 function asn() {  dig $(dig -x $1 | grep PTR | tail -n 1 | grep -Eo '\d+\.\d+\.\d+\.\d+').origin.asn.cymru.com TXT +short }
 
 # stupid max ssh
-# ssh-add -K ~/.ssh/*
+ssh-add -K ~/.ssh/id_rsa
 
 # node / nvm
 export NVM_DIR="$HOME/.nvm"

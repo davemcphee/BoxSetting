@@ -1,0 +1,10 @@
+[user]
+	name = Alex Schmitz
+	email = aschmitz@box.com
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	amend = commit --amend --no-edit
+
+[pager]
+	diff = /home/aschmitz/diff-so-fancy/diff-so-fancy | less --tabs=1,5 -RFX
+	show = /home/aschmitz/diff-so-fancy/diff-so-fancy | less --tabs=1,5 -RFX
