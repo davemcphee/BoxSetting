@@ -23,6 +23,8 @@ plugins=(
   colorize
   common-aliases
   copyfile
+  poetry
+  httpie
 )	
 
 SPACESHIP_PROMPT_ORDER=(
@@ -212,3 +214,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PATH="/usr/local/sbin:$PATH"
+eval "$(pyenv init -)"
+
+# GCP gcloud stuff
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+# auto tmuxery
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux attach
+fi
+
