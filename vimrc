@@ -97,7 +97,6 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'michaeljsmith/vim-indent-object'
 
 " =========== git
-Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jparise/vim-graphql'

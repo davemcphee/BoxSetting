@@ -25,7 +25,8 @@ plugins=(
   copyfile
   poetry
   httpie
-)	
+  thefuck
+)
 
 SPACESHIP_PROMPT_ORDER=(
   time
@@ -185,6 +186,7 @@ alias opensource="cd documents/project/Open\ Source"
 alias appren="cd /documents/project/Apprehenticeship"
 alias personal="cd /document/project/Personal\ Projects"
 local ret_status="%(?:%{$fg[yellow]%}=> :%{$fg[red]%}=> %s)"
+alias ta="terraform apply -auto-approve"
 
 # npm global
 export PATH=~/.npm-global/bin:$PATH
@@ -196,8 +198,9 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# GO 
+# GO
 export GOPATH="${HOME}/go"
+export PATH=$PATH:$GOPATH/bin
 
 # ALIASES
 alias bas="ssh bastion"
@@ -221,7 +224,13 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.in
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # auto tmuxery
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux attach
-fi
+# if command -v tmux>/dev/null; then
+#   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux attach
+# fi
 
+# docker fancy things
+export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
+
+# python39 path
+export PATH="/Users/aschmitz/Library/Python/3.9/bin:$PATH"
