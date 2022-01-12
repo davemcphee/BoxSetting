@@ -15,7 +15,7 @@ plugins=(
   git
   docker
   dotenv
-  osx
+  macos
   jsontools
   pip
   zsh-autosuggestions
@@ -234,3 +234,4 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 
 # python39 path
 export PATH="/Users/aschmitz/Library/Python/3.9/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
