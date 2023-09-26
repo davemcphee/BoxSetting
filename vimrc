@@ -10,7 +10,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 Plugin 'styled-components/vim-styled-components'
 Plugin 'mattn/emmet-vim'
 Plugin 'ervandew/supertab'
-Plugin 'valloric/youcompleteme'
+" ========== Plugin 'valloric/youcompleteme'
 Plugin 'luochen1990/rainbow'
 let g:rainbow_active = 1 "0
 let mapleader = ","

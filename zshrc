@@ -1,3 +1,5 @@
+# zmodload zsh/zprof
+
 export ZSH="/Users/aschmitz/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
@@ -25,7 +27,7 @@ plugins=(
   copyfile
   poetry
   httpie
-  thefuck
+#   thefuck
 )
 
 SPACESHIP_PROMPT_ORDER=(
@@ -181,10 +183,7 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vimconfig='vim ~/.vimrc'
 alias update="source ~/.zshrc"
-alias pro="cd documents/project/"
-alias opensource="cd documents/project/Open\ Source"
-alias appren="cd /documents/project/Apprehenticeship"
-alias personal="cd /document/project/Personal\ Projects"
+alias proj="cd ~/proj"
 local ret_status="%(?:%{$fg[yellow]%}=> :%{$fg[red]%}=> %s)"
 alias ta="terraform apply -auto-approve"
 
@@ -201,6 +200,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # GO
 export GOPATH="${HOME}/go"
 export PATH=$PATH:$GOPATH/bin
+export PATH="/usr/local/opt/go@1.19/bin:$PATH"
 
 # ALIASES
 alias bas="ssh bastion"
@@ -209,7 +209,7 @@ alias bas="ssh bastion"
 function asn() {  dig $(dig -x $1 | grep PTR | tail -n 1 | grep -Eo '\d+\.\d+\.\d+\.\d+').origin.asn.cymru.com TXT +short }
 
 # stupid max ssh
-ssh-add -K ~/.ssh/id_rsa
+ssh-add --apple-use-keychain ~/.ssh/id_rsa
 
 # node / nvm
 export NVM_DIR="$HOME/.nvm"
@@ -217,21 +217,37 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PATH="/usr/local/sbin:$PATH"
-eval "$(pyenv init -)"
 
 # GCP gcloud stuff
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-# auto tmuxery
-# if command -v tmux>/dev/null; then
-#   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux attach
-# fi
+alias gca="gcloud auth login --update-adc"
 
 # docker fancy things
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 
-# python39 path
-export PATH="/Users/aschmitz/Library/Python/3.9/bin:$PATH"
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# pyenv
+eval "$(pyenv init -)"
+export PATH="/Users/aschmitz/.pyenv/shims:${PATH}"
+
+# mysql client stuff for python
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+# poetry
+# export PATH="/Users/aschmitz/.local/bin:$PATH"
+
+# golang coverage test
+cover () {
+    local t=$(mktemp -t cover)
+    go test $COVERFLAGS -coverprofile=$t $@ \
+        && go tool cover -func=$t \
+        && unlink $t
+}
+
+# GPG Things for GHE
+export GPG_TTY=$(tty)
+gpg-agent --daemon --enable-ssh-support
